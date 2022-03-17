@@ -43,6 +43,9 @@ ul a {
     color: #000000;
     text-decoration-color: #000000;
 }
+.left a {
+    text-decoration: underline #000000;
+}
 
 .right{
     position: absolute;
@@ -325,6 +328,121 @@ label {
     width: 100%;
 }
 
-/* {
-    border: 1px solid #E4E4E4;
-} */
+.introduction{
+    background-color: #204546;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    letter-spacing: 0.5px;
+    
+}
+.service {
+    background-color: #F7F7F7;
+    text-align: center;
+    padding: 15px ;
+}
+
+.service img{
+   background-color: white;
+   border-radius: 50%;
+   width: 55px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.service h3 {
+    color: #383838;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.service h5{
+    color: #336667;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.formulaire{
+    background-color: #3AB39B;
+    padding: 40px;
+}
+
+.for_left{
+    color: white;
+  
+}
+
+.for_right input{
+    position: absolute;
+    border: 1px solid #3AB39B;
+    border-radius: 15px;
+    padding: 5px 40px;
+}
+.for_right a{
+    position: absolute;
+    color: #000000;
+    text-decoration: underline #000000 ;
+}
+.for_right label{
+  
+    font-size: 10px;
+    color: white;
+}
+.for_right img{
+    padding: 6px;
+    background-color: #d4a0a0;
+    border-radius: 50%;
+    width: 35px;
+    transform: rotate(45deg);
+    filter: invert(1);
+    margin-left: 280px;
+}
+.for_right {
+    margin-left: 85px;
+}
+.footer_one{
+    background-color: #336667;
+    padding: 80px;
+    color: white;
+}
+.footer_one a{
+    color: white;
+    text-decoration: none;
+    line-height: 2px;
+}
+.lg_footer{
+    text-align: center;
+    right: 120px;
+    margin-right: 150px;
+}
+
+.lg_footer img {
+    margin-bottom: 20px;
+}
+.lg_footer h5{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;  
+}
+.propos a {
+    line-height: 35px;
+}
+.commercants a{
+    line-height: 35px;
+}
+.compte a {
+   line-height: 35px;
+}
+.besoin a{
+    line-height: 35px;
+}
+
+.footer_second{
+    background-color: #336667;
+    color: white;
+    border-top: 1px solid white;
+    
+}
+.social_media img{
+    filter: invert(1);
+    justify-content: space-between;
+}
