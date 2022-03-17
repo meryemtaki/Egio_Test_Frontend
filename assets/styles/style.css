@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 body{
+    font-size: 15px;
     width: 100%;
     height: 100vh;
 }
@@ -97,6 +98,10 @@ img {
     border-style: none;
 }
 
+.product{
+    padding: 40px 0;
+}
+
 .detail_pr span{
     padding: 3px;
     background-color: #F7F7F7;
@@ -106,13 +111,22 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 15px 0;
 }
 .prix p{
     margin: 0;
 }
+.product h4{
+    font-weight: 400;
+    margin: 20px 0 0;
+}
+.product h3{
+    margin-bottom: 20px;
+}
 .prix h3{
     font-weight: 700;
     font-size: 25px;
+    margin: 0;
 }
 .detail_pr span {
     padding: 3px;
@@ -136,6 +150,7 @@ img {
 }
 .detail_pr h5 {
     font-weight: 400;
+    margin-top: 10px;
 }
 .detail_pr label{
     border: 1px solid #E4E4E4;
@@ -154,30 +169,146 @@ input#panier {
     background-color: #3AB39B;
     border: #3AB39B;
     color: white;
+    margin: 0 20px;
 }
 
-.detail_pr a{
-    padding: 10px 20px;
+.detail_pr a[download]{
+    padding: 5px 15px;
     border: 1px solid #3AB39B;
-    border-radius: 15px;
+    border-radius: 30px;
     color: #000000;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
 }
 .detail_pr a img{
-    transform: scale(0.5);
+    width: 25px;
+    margin-right: 15px;
 }
 
-
-.similaires label{
+.addCart{
+    display: flex;
+    align-items: center;
+}
+.addCart .number{
+    display: flex;
+    align-items: center;
     border: 1px solid #E4E4E4;
-    padding: 0 5px;
-    cursor: pointer;
+    border-radius: 30px;
 }
-.similaires input[type="radio"]{
-    display: none;
+.addCart .number span{
+    background: transparent;
 }
-.similaires input[type="radio"]:checked + label{
+.addCart .number span img{
+    width: 25px;
+    filter: invert(98%) sepia(0%) saturate(4079%) hue-rotate(193deg) brightness(114%) contrast(79%);
+}
+.addCart .number input{
+    border: 0;
+    width: 30px;
+    text-align: center;
+    outline: none;
+}
+.slider-for img{
+    width: 100%;
+}
+.slider-nav{
+    margin: 20px 30px 0;
+}
+
+.slider-nav .slick-slide{
+    padding: 0 10px;
+}
+.slider-nav img{
+    border: 3px solid transparent;
+    width: 100%;
+}
+.slider-nav .slick-slide.is-active img {
     border-color: #3AB39B;
+}
+
+.slick-prev, .slick-next {
+    width: auto;
+    height: auto;
+    top: 50%;
+    transform: scale(0.6) translateY(-75%);
+}
+.slick-prev{
+    left: -50px;
+}
+.slick-next{
+    right: -50px;
+}
+.slick-next:before{
+    opacity: 1;
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAAuUlEQVR4nO3ZMUoDUQBF0YNZiVjZpHFFLsHlGheQECFkA6LFCAFtM/mBf08z3cx/FwIZhiRJkiRJprNZ+f5PeMUB55WfdZfe8Y1PbAefZYgPS4BpI2wtw6eO8Iy9S4QTXoaeaIAiKAKKgCKgCCgCioAioAgoAnp3wP8IuzUf9rDmza/ka/QBbmnqn8Df8UeNn0PjNb7xjR96ohtqvMY3furxU/23Z3mVnXY8fR73iLffa5IkSZIkuQ8/ZlGCktXxr+oAAAAASUVORK5CYII=");
+}
+.slick-prev::before{
+    opacity: 1;
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAAuUlEQVR4nO3XPUpDYRRF0YWORKxsbByRQ3C0/kzAYECcgTYBQwQreTfy7dUEUjzu2RDII0mSJEmS5VxOH/CLa9xjh4/hWzZ3iz0+8TR8y+aOxy8X4HT8/vDdEk7Hv2n8Ghqv8Y1v/OhFG2q8xjd+6fFL/beHZ2c+/uKfP//sLf8TgBu8+o7wjrvRiwYUQRFQBBQBRUARUAQUAUVAEdC7A35GeJk9Z8ZxhMfhW8Zc4eHwmSRJkiRJ/s4XnzyBkJQuO3oAAAAASUVORK5CYII=");
+}
+
+.tabs{
+    padding: 0 40px;
+}
+.nav-tabs{
+    border-bottom: 1px solid #E4E4E4;
+}
+.nav-tabs .nav-link{
+    font-weight: 600;
+}
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    color: black;
+}
+.nav-tabs .nav-link.active{
+    color: black;
+    border-color: transparent transparent #3AB39B;
+    border-bottom-width: 4px;
+}
+.tab-content>.tab-pane{
+    padding: 10px 0;
+}
+
+.similaires{
+    padding: 20px 40px 40px;
+}
+.similaires h2{
+    margin-bottom: 30px;
+}
+.similaires .simil_prod{
+    border: 1px solid #E4E4E4;
+}
+.similaires .desc{
+    padding: 20px;
+}
+.similaires h3{
+    font-size: 23px;
+    color: #336667;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.similaires .desc p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.similaires .desc h6{
+    font-size: 12px;
+    color: #686868;
+}
+.similaires .desc h4{
+    font-size: 24px;
+}
+.similaires .desc h4 span{
+    font-size: 18px;
+    background: transparent;
+    padding: 0;
+}
+.similaires .desc span{
+    font-size: 10px;
+    background: #F7F7F7;
+    padding: 5px;
 }
 .row{
     position: relative;
@@ -192,10 +323,6 @@ label {
 }
 .similaires img{
     width: 100%;
-}
-
-.similaires{
-    padding: 0 40px;
 }
 
 /* {
