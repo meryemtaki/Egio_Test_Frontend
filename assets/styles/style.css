@@ -52,7 +52,11 @@ ul a {
     right: 0;
 }
 .right img{
-    transform: scale(0.3);
+    width: 20px;
+}
+.right a{
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .navbar-second{
@@ -277,10 +281,27 @@ input#panier {
 .similaires{
     padding: 20px 40px 40px;
 }
+.similaires a{
+    text-decoration: none;
+}
+.similaires .like{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #F0A7A1;
+    line-height: 1;
+    border-radius: 50%;
+}
+.similaires .like img{
+    width: 25px;
+    filter: invert(1);
+    padding: 5px;
+}
 .similaires h2{
     margin-bottom: 30px;
 }
 .similaires .simil_prod{
+    position: relative;
     border: 1px solid #E4E4E4;
 }
 .similaires .desc{
@@ -295,6 +316,7 @@ input#panier {
 .similaires .desc p{
     font-size: 16px;
     margin-bottom: 10px;
+    color: black;
 }
 .similaires .desc h6{
     font-size: 12px;
@@ -302,6 +324,7 @@ input#panier {
 }
 .similaires .desc h4{
     font-size: 24px;
+    color: black;
 }
 .similaires .desc h4 span{
     font-size: 18px;
@@ -312,6 +335,7 @@ input#panier {
     font-size: 10px;
     background: #F7F7F7;
     padding: 5px;
+    color: black;
 }
 .row{
     position: relative;
@@ -366,24 +390,35 @@ label {
     padding: 40px;
 }
 
-.for_left{
+.for_left h2{
     color: white;
-  
+    font-weight: 400;
 }
 
-.for_right input{
-    position: absolute;
+.for_right{
+    margin-right: 50px;
+}
+
+.for_right input[type="email"]{
+    outline: 0;
     border: 1px solid #3AB39B;
     border-radius: 15px;
-    padding: 5px 40px;
+    padding: 5px 40px 5px 20px;
+    width: 100%;
+    margin-right: 10px;
+}
+.for_right input[type="checkbox"]{
+    margin: 5px 10px 0 0;
+}
+.for_right button{
+    border: 0;
+    background: transparent;
 }
 .for_right a{
-    position: absolute;
     color: #000000;
     text-decoration: underline #000000 ;
 }
 .for_right label{
-  
     font-size: 10px;
     color: white;
 }
@@ -394,14 +429,20 @@ label {
     width: 35px;
     transform: rotate(45deg);
     filter: invert(1);
-    margin-left: 280px;
 }
-.for_right {
-    margin-left: 85px;
+form > div{
+    display: flex;
+    margin-bottom: 10px;
+}
+form > div:last-of-type{
+    margin-bottom: 0;
+}
+
+footer{
+    background-color: #336667;
 }
 .footer_one{
-    background-color: #336667;
-    padding: 80px;
+    padding: 40px 0;
     color: white;
 }
 .footer_one a{
@@ -410,9 +451,10 @@ label {
     line-height: 2px;
 }
 .lg_footer{
-    text-align: center;
-    right: 120px;
-    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .lg_footer img {
@@ -421,31 +463,29 @@ label {
 .lg_footer h5{
     font-weight: 400;
     font-size: 14px;
-    line-height: 25px;  
+    margin-bottom: 0;
+    text-align: center;
+    margin-left: 10px;
 }
-.propos a {
-    line-height: 35px;
+.footer_ul{
+    margin-top: 20px;
 }
-.commercants a{
-    line-height: 35px;
-}
-.compte a {
-   line-height: 35px;
-}
-.besoin a{
-    line-height: 35px;
+.footer_ul li {
+    margin-bottom: 10px;
+    font-size: 13px;
 }
 
 .footer_second{
-    background-color: #336667;
     color: white;
-    
+    padding: 10px 0;
+    border-top: 1px solid white;
 }
 .social_media img{
     filter: invert(1);
-    justify-content: space-between;
+    width: 20px;
+    margin: 0 10px;
 }
-
-.footer_second .row {
-    border-top: 1px solid white;
+.footer_second p{
+    font-size: 12px;
+    margin-bottom: 0;
 }
