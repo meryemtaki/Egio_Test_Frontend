@@ -439,10 +439,13 @@ label {
 .footer_second{
     background-color: #336667;
     color: white;
-    border-top: 1px solid white;
     
 }
 .social_media img{
     filter: invert(1);
     justify-content: space-between;
+}
+
+.footer_second .row {
+    border-top: 1px solid white;
 }
