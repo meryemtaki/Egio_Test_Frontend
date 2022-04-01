@@ -53,3 +53,12 @@ $(document).ready(function() {
         $('.slider-for').slick('slickGoTo', goToSingleSlide);
     });
 });
+
+let menuToggle = document.querySelector('.toggle');
+let navigation = document.querySelector('.flex');
+let html = document.querySelector('body');
+menuToggle.onclick = function(){
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+    html.classList.toggle('overflow')
+}

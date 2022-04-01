@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/styles/slick-theme.css">
     <link rel="stylesheet" href="assets/styles/slick.css">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Menu-maquette</title>
 </head>
 <body> 
@@ -27,7 +29,8 @@
             </div>
         </nav>
 
-        <nav class="navbar-second">
+        <nav class="navbar-second" role="navigation">
+
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-3">
@@ -35,20 +38,28 @@
                             <img src="assets/media/Groupe 5.png" alt="">
                         </div>
                     </div>
-        
+
+                
                     <div class="col-lg-6">
-                        <ul class="flex">
-                            <li><a href="#">Maquillage</a></li>
-                            <li><a href="#">Visage</a></li>
-                            <li><a href="#">Corps</a> </li>
-                            <li><a href="#">Cheveux</a></li>
-                            <li><a href="#">Hygiène</a></li>
-                            <li><a href="#">Bien-être </a></li>
-                            <li><a href="#">DIY</a></li>
-                            <li><a href="#">Coffrets </a></li>
-                            <li><a href="#">Artisants</a></li>
+                        
+                        <ul class="flex" id="nav">
+                            <li class="navbar__link"><a href="#">Maquillage</a></li>
+                            <li class="navbar__link"><a href="#">Visage</a></li>
+                            <li class="navbar__link"><a href="#">Corps</a> </li>
+                            <li class="navbar__link"><a href="#">Cheveux</a></li>
+                            <li class="navbar__link"><a href="#">Hygiène</a></li>
+                            <li class="navbar__link"><a href="#">Bien-être </a></li>
+                            <li class="navbar__link"><a href="#">DIY</a></li>
+                            <li class="navbar__link"><a href="#">Coffrets </a></li>
+                            <li class="navbar__link"><a href="#">Artisants</a></li>
                         </ul>
                     </div>
+                    <div class="toggle">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+    </div>
+                        
+                        
                     <div class="col-lg-3">
                         <div class="icons-nav">
                             <div class="user">
@@ -187,7 +198,7 @@
                             <img class="icon-header heart" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAElklEQVR4nO2aW4hVVRjHf3PlhJYajHOhnEAjSDCmIPJFQyLGHhLJgl5GKpAuioLdgyQQCSOTogcjequHGqqpiF7SIiwpyXrIHFBhVBKhGh1nRrPx7B7WGtj7W59z9mXtfebk/sGC2XvW+q//Wmfd94KSkpKSkpKSq5WmDGmvAe4G7gP6gE6gG2gBzgLDwI/AEPADUE2o3wwsB9YAdwK3APOBy8Bp4AxwCPgS+Aa4kKEsiegCXgfGgSBmOAI8gqmcWrTYuMMJ9Metp04P5ZvR2DZgMoExGX4Cls2Qx23AwQz6E8DLxKvoRHQD+zIYC4dJYEDJYz3ZKjcc9lrPXlgEjFwhoxFgN9APLAbmABWgBzM27AROKOmqwDOhPJ617zT9ncBqq1mxeSy273bX8LYoa+E70fviCUw/bYuh0Yr5dU8pOk/aIN+fwrSSOE25DXgUvaKPAAtjaKg0A98qop8CC1LoLQA+EVpTNoTffYwZ7ZNyPWbGkX73kXK2036Zd9OKWZqBdxTd6bDHxklLk/UodR9PKrQQGBMiQ/gZXVuALxSTn3vU/0xonwM6koi8JAT+JENfUujALGSm9c8kNViDTuAvomV4IW7iVuCkSPyER3PTDIT0tWkxK08RLcMIpmw1WSESjmKmHt80AfttyDKuXIm5mCV5uCwrZCRtwLlLPH+EWWH5JgA22RDkoD8ODIp3y2UkrQJkpP2+HCn8bENeSO9OBWgcJtpslno2VSRLiZZlOE4iOf3l0f+LYg7RspyXEbQuUIkRp1GQ64p2GUErnKylHm92ikd6H5MRtAo4KZ5v9GaneKR3WTa1Ag6LZ2fubCBWimdZNrUC9ornfm92ime1eP46TqJeoiPnZTwcLNSBm3APWWJ3599FwtdyMJg3u4iW4bckibeKxOeA6zwbzJNrcfcBW5IIzMdMh2GBbX495sorRL2PAfOSirwtRCZojLGgF/d0+a00Qj24reBDPx5zZRB3+Zv6iPxFIRYAD2f3mBvrcP0+n0WwAhwTgqPMzq7Qi/EW9noMd2+TmJWYtUBY+DvifRMoinbM3l8eucuVYGp24Dat93yJe2APrr/tPjNoAw4omWz0mUlKNuP6OkAOLbQb97R4CnjId0YJWIv7ZekP4Ia8Mrwd917AP9Rnw3QPcFF4mcRcpsiVB3Br/TzFbptXYRZmsjWuK8rAetyZYQK4t4C8+3FXelVgQwF5R9AGnwvA/TnmuRa32QfWS13YirvnnsJ87PDNFtyuVwWeziGvRGzA7Q4BZm6O9S2uBi3Am4p+lTr+8pIB4BKuySGyfVeYi/lsLnUvYW6ozCpWAX/jmv0FWJJC72bgV0VvFDMFzkqWoN8pGiPZgmkN7sYmAI4Dt3r0mwsduBuT6T67C+XrTIh24A30G2Pf4/eSRq5UgPdxCxFgmnWfkqYPvckHwAd42NbWgwH0y4//Aq9ifvFW4DnMklrGu8gsGunTcgdwFP2XPYQZJLX/HbVp/xfMwz2rmykMkuIUtxF4EPf2VjicpQ5r+qLpQr/R+RWN/SU6MY9h5vpR+/dVSZcNJSUlJSX14D9Ak0peAj+7PwAAAABJRU5ErkJggg=="/>
                         </div>
 
-                        <a href="assets/media/2015_TDI_2A_P_V1-3.pdf" download><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAABeElEQVR4nO2ZMU7DMBhGnytOAis36ModGBCsPQJrK1bEBAKprEXiPoz0BEwIZsIQR02jJJCo6Zcm35MsWY3TPH/541YxGGOMMcaYcRKE154AF7G/An6ELhKugCS2S5XERHVh4DjXP1FJKAPoBQ5ALaDGAagF1DgAtYAaB6AWUOMA1AJqHIBaQI0DUAuo6TqAG+AbuKXZ26cA3MVzFx147Y0vNm99ntgOYZ47Ns99HuLY7Nhnl4JdV8Ay158Bj9RXQohjZhXfcXAE4J7N3UyAZ9LgixUQgIfC2CUDWKeqQliwHcAgJ59RfK4T4KOiX7ZeDIKySihrg7rzRf4KYdCTz6gKYRSTzyiGIJu8cqEJwHnsv5IGYfZNkwro+25u53692M2toZVfk4WnF7u5NbTyG83PThUOQC2gxgGoBdQ4ALWAmqOW502B612K7IBpm5PaBnAW28HT5BFYd2axe97/O7BJBaxI/2efNtbZL2/Ai1rCGGOMMcb0nV/wQ2Ny2wsxgAAAAABJRU5ErkJggg=="/> Télécharger les détails du produit</a>
+                        <a href="assets/media/Nenu-Maquette.png" download><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAABeElEQVR4nO2ZMU7DMBhGnytOAis36ModGBCsPQJrK1bEBAKprEXiPoz0BEwIZsIQR02jJJCo6Zcm35MsWY3TPH/541YxGGOMMcaYcRKE154AF7G/An6ELhKugCS2S5XERHVh4DjXP1FJKAPoBQ5ALaDGAagF1DgAtYAaB6AWUOMA1AJqHIBaQI0DUAuo6TqAG+AbuKXZ26cA3MVzFx147Y0vNm99ntgOYZ47Ns99HuLY7Nhnl4JdV8Ay158Bj9RXQohjZhXfcXAE4J7N3UyAZ9LgixUQgIfC2CUDWKeqQliwHcAgJ59RfK4T4KOiX7ZeDIKySihrg7rzRf4KYdCTz6gKYRSTzyiGIJu8cqEJwHnsv5IGYfZNkwro+25u53692M2toZVfk4WnF7u5NbTyG83PThUOQC2gxgGoBdQ4ALWAmqOW502B612K7IBpm5PaBnAW28HT5BFYd2axe97/O7BJBaxI/2efNtbZL2/Ai1rCGGOMMcb0nV/wQ2Ny2wsxgAAAAABJRU5ErkJggg=="/> Télécharger les détails du produit</a>
                     </div>
                 </div>
             </div>
@@ -224,7 +235,7 @@
     <section class="similaires">
         <h2 class="text-center">Produits similaires</h2>
         <div class="container-fluid">
-            <div class="row " >
+            <div class="row" >
                 <div class="col-lg-3">
                     <div class="simil_prod">
                         <div class="like">
@@ -348,7 +359,7 @@
 
     <section class="formulaire">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-lg-7">
                     <div class="for_left">
                         <h2>Je m'abonne à la newsletter</h2>
@@ -388,7 +399,7 @@
       <footer>
           <div class="container">
             <div class="footer_one">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="lg_footer">
                           <img src="assets/media/Groupe 136.png" alt="">
@@ -438,7 +449,7 @@
                  </div>
             </div>
             <div class="footer_second">
-                <div class="row align-items-center">
+                <div class="row align-items-center" >
                     
                     <div class="col-lg-2">
                         <p>Copyright © 2020 - Nenufea</p>

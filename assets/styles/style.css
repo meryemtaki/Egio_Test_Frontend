@@ -20,6 +20,9 @@ ul a {
     
 }
 
+.tel{
+    display: none;
+}
 /* nav{
     padding: 0 40px;
     width: 100%;
@@ -488,4 +491,156 @@ footer{
 .footer_second p{
     font-size: 12px;
     margin-bottom: 0;
+}
+
+.tel{
+    display: none;
+}
+
+
+.footer_second > .row{
+    justify-content: center;
+}
+.footer_one > .row{
+    justify-content: center;
+}
+
+
+.toggle {
+    display:none;
+  }
+
+
+@media screen and (max-width:768px) {
+    .footer_second{
+        text-align: center;
+        line-height: 30px;
+    }
+    .footer_one{
+        text-align: center;
+
+    }
+    .lg_footer {
+        align-items: center;
+    padding-bottom: 45px;
+    }
+    .formulaire{
+        padding: 0px;
+    }
+    
+    .for_left h2{
+        font-size: 26px;
+        padding-top: 4px;
+        padding-bottom: 10px;
+    }
+    .description a{
+        font-size: 13px;
+    }
+   
+   .logo img{
+       width: 140px;
+   }
+
+/*  */
+.icon-header.user{
+    width: 30px;
+    padding: 6px;
+}
+.icon-header.heart{
+    width: 30px;
+    padding: 6px;
+}
+.icon-header.cart{
+    width: 30px;
+    padding: 6px;
+}
+.icons-nav{
+    justify-content: center;
+}
+body:not(.overflow) .navbar-second{
+    overflow: hidden;
+}
+.navbar-second ul { 
+    transform: translateX(100%);
+    position:absolute;
+    width: 80%;
+    background: white;
+    z-index: 1;
+    top: 50px;
+    right: -40px;
+    height: calc(100vh - 142px);
+    display: block;
+    transition: all .3s ease-in-out;
+  }
+  .navbar-second ul::after {
+    content: '';
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    left: -1000%;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+body.overflow{
+    overflow: hidden;
+}
+.right{
+    position: relative;
+}
+.logo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+  .navbar-second ul.active {
+      transform: translateX(0);
+  }
+  .navbar-second ul.active::after {
+      opacity: 1;
+      visibility: visible;
+  }
+  .navbar-second ul li { 
+    padding: 9.5px 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .similaires .simil_prod{
+        margin-bottom: 20px;
+    }
+/*  */
+
+  .toggle{
+    position: relative;
+    background: transparent;
+    border-radius:10px ;
+    cursor: pointer;
+    display: flex;
+    
+    
+}
+
+.toggle.active{
+    background-color: transparent;
+}
+.toggle ion-icon{
+    position: absolute;
+    color: black;
+    font-size: 34px;
+    display: none;
+}
+
+.toggle ion-icon.open,
+.toggle.active ion-icon.close
+{
+    display: block;
+}
+
+.toggle.active ion-icon.open,
+.toggle ion-icon.close
+{
+    display:none;
+}
+
+
 }
